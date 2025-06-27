@@ -1683,7 +1683,7 @@ function Library:Load(Parameters)
 		GetPropertyChangedSignal(Workspace.CurrentCamera, "ViewportSize"):Connect(function()
 			Screen = CurrentCamera.ViewportSize
 		end)
-		
+
         Menu.InputBegan[#Menu.InputBegan + 1] = function(Input)
             if Input.UserInputType == Enum.UserInputType.Keyboard and Input.KeyCode == Enum.KeyCode.Delete then
                 Menu[Menu.IsOpen and "Close" or "Open"](Menu)
@@ -1695,7 +1695,7 @@ function Library:Load(Parameters)
             local InputBegan = Menu.InputBegan
             local InputEnded = Menu.InputEnded
             local InputChanged = Menu.InputChanged
-            
+
             UserInputService.InputBegan:Connect(function(Input)
                 for i = 1, #InputBegan do
                     InputBegan[i](Input)
