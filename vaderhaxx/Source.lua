@@ -740,7 +740,7 @@ function Library:Load(Parameters)
         end
 
         Tab.Sections[Name] = Section
-        Tab.Offsets[Side] = Tab.Offsets[Side] + Section.ContentHolder.AbsoluteSize.Y + 2 -- Use the actual section size + 2 pixels for stroke
+        Tab.Offsets[Side] = Tab.Offsets[Side] + Section.ContentHolder.AbsoluteSize.Y + 2 + 12 -- Use the actual section size + 2 pixels for stroke
         Menu.Elements[Parameters.Tab][Name] = Section
 
         return Section
