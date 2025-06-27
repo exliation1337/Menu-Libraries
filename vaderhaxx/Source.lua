@@ -1719,3 +1719,5 @@ function Library:Load(Parameters)
 
     return Menu
 end
+
+return Library
